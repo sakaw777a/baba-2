@@ -3,7 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الأستاذ محمد عابدين محمد | فيزياء وكيمياء - المرحلة الثانوية بالكويت</title>
+
+<!-- SEO & GEO TAGS FOR KUWAIT -->
+<title>مدرس فيزياء وكيمياء في الكويت | الأستاذ محمد عابدين - 10, 11, 12</title>
+<meta name="description" content="مدرس فيزياء وكيمياء خصوصي للمرحلة الثانوية بالكويت (عاشر، حادي عشر، ثاني عشر) عربي وإنجليزي. دروس منزلية وأونلاين لجميع مناطق الكويت. تواصل عبر الواتساب.">
+<meta name="keywords" content="مدرس فيزياء الكويت, مدرس كيمياء الكويت, مدرس خصوصي فيزياء, مدرس كيمياء ثانوية عامة, مدرس عاشر الكويت, مدرس حادي عشر, مدرس ثاني عشر, دروس خصوصية الكويت">
+<meta name="geo.region" content="KW" />
+<meta name="geo.placename" content="Kuwait" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="مدرس فيزياء وكيمياء في الكويت | الأستاذ محمد عابدين" />
+<meta property="og:description" content="تدريس مادتَي الفيزياء والكيمياء باللغتين العربية والإنجليزية للمرحلة الثانوية بجميع مناهج دولة الكويت." />
+<meta property="og:type" content="website" />
+
+<!-- Schema Markup (Structured Data) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "الأستاذ محمد عابدين - مدرس فيزياء وكيمياء بالكويت",
+  "telephone": "+96551308749",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "KW"
+  },
+  "description": "تدريس مادتَي الفيزياء والكيمياء للمرحلة الثانوية بجميع مناهج دولة الكويت."
+}
+</script>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -95,10 +122,19 @@
   }
   .btn-primary:hover{ filter:brightness(1.08); }
 
+  @keyframes pulse-btn {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+  .pulse-animation {
+    animation: pulse-btn 2.5s infinite ease-in-out;
+  }
+
   :focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; border-radius:6px; }
 
   @media (prefers-reduced-motion: reduce){
     .orbit-1, .orbit-2, .orbit-3{ animation:none; }
+    .pulse-animation { animation:none; }
   }
 </style>
 </head>
@@ -107,7 +143,7 @@
 <!-- HEADER -->
 <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0F0B2E]/90 border-b border-white/10">
   <div class="max-w-7xl mx-auto px-5 md:px-8 py-3.5 flex items-center justify-between">
-    <div class="flex items-center gap-3">
+    <a href="#" class="flex items-center gap-3">
       <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:linear-gradient(135deg,var(--indigo),var(--purple));">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.6" fill="white"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="white" stroke-width="1.4"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="white" stroke-width="1.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="white" stroke-width="1.4" transform="rotate(120 12 12)"/></svg>
       </div>
@@ -115,12 +151,11 @@
         <p class="text-white font-bold text-[15px] md:text-base leading-tight">الأستاذ محمد عابدين محمد</p>
         <p class="text-[11px] md:text-xs text-indigo-200/70 mono leading-tight">Physics · Chemistry Teacher</p>
       </div>
-    </div>
+    </a>
     <a href="https://wa.me/96551308749" target="_blank" rel="noopener"
        class="flex items-center gap-2 text-white text-sm md:text-[15px] font-bold px-4 md:px-5 py-2.5 rounded-full btn-primary transition">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.49.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.62-.6-2.86-1.24-4.72-4.1-4.86-4.29-.14-.19-1.16-1.55-1.16-2.96 0-1.4.73-2.09.99-2.37.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.28-.12.56.16.28.71 1.17 1.53 1.89 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.12.07.66-.17 1.34Z"/></svg>
-      <span class="hidden sm:inline">تواصل عبر الواتساب</span>
-      <span class="sm:hidden">واتساب</span>
+      <span>تواصل عبر الواتساب</span>
     </a>
   </div>
 </header>
@@ -149,8 +184,8 @@
         منهج دولة الكويت — المرحلة الثانوية
       </span>
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-[1.25] mb-5">
-        <span class="grad-text">الفيزياء والكيمياء</span><br>
-        بأبسط وأحدث الطرق
+        <span class="grad-text">مدرس الفيزياء والكيمياء</span><br>
+        بأبسط وأحدث الطرق بالكويت
       </h1>
       <p class="text-indigo-100/80 text-base md:text-lg leading-relaxed mb-6 max-w-xl mx-auto md:mx-0">
         تدريس مادتَي الفيزياء والكيمياء باللغتين العربية والإنجليزية للمرحلة الثانوية بجميع مناهج دولة الكويت.
@@ -158,7 +193,7 @@
       <div class="flex justify-center md:justify-start mb-8">
         <span class="inline-flex items-center gap-2 bg-white/8 border border-white/15 text-sm text-indigo-50 px-4 py-2 rounded-full">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.2-9.5-9C.5 8.4 2 4.5 6 4.5c2 0 3.3 1 4 2 0.7-1 2-2 4-2 4 0 5.5 3.9 3.5 7.5-2.5 3.8-9.5 9-9.5 9Z"/></svg>
-          دروس خاصة ومجموعات بالكويت
+          دروس خاصة ومجموعات بالكويت (منزلي وأونلاين)
         </span>
       </div>
       <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3.5">
@@ -253,16 +288,46 @@
   </div>
 </section>
 
+<!-- FAQ SECTION -->
+<section id="faq" class="py-20 md:py-24 bg-[var(--paper)] border-t border-slate-200/60">
+  <div class="max-w-4xl mx-auto px-5 md:px-8">
+    <div class="text-center mb-12">
+      <p class="mono text-xs tracking-wide text-indigo-500 mb-2">FREQUENTLY ASKED QUESTIONS</p>
+      <h2 class="text-2xl md:text-3xl font-black text-[var(--ink)]">الأسئلة الشائعة</h2>
+    </div>
+
+    <div class="space-y-4">
+      <div class="element-tile rounded-xl p-6 shadow-sm">
+        <h3 class="font-bold text-lg text-[var(--ink)] mb-2">هل الحصص متاحة حضوريًا أم أونلاين؟</h3>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">الحصص متاحة بالنظامين: دروس خصوصية منزلية في مختلف مناطق الكويت، أو حصص أونلاين تفاعلية عالية الجودة.</p>
+      </div>
+
+      <div class="element-tile rounded-xl p-6 shadow-sm">
+        <h3 class="font-bold text-lg text-[var(--ink)] mb-2">هل يتم الشرح لمدارس اللغات والمنهج الإنجليزي؟</h3>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">نعم، يتم تقديم الشرح باللغتين العربية والإنجليزية للمدارس الحكومية والخاصة مع تبسيط المصطلحات العلمية.</p>
+      </div>
+
+      <div class="element-tile rounded-xl p-6 shadow-sm">
+        <h3 class="font-bold text-lg text-[var(--ink)] mb-2">كيف يتم التنسيق وحجز المواعيد؟</h3>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed">يمكنك التواصل مباشرة عبر الواتساب لتحديد المرحلة الدراسية، المنطقة، والمواعيد المناسبة للطالب.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT / FOOTER -->
 <footer id="contact" class="chalk-panel py-20 md:py-24 text-white">
   <div class="max-w-4xl mx-auto px-5 md:px-8 text-center relative">
     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="mx-auto mb-6 opacity-90"><path d="M12 21s-7-5.2-9.5-9C.5 8.4 2 4.5 6 4.5c2 0 3.3 1 4 2 0.7-1 2-2 4-2 4 0 5.5 3.9 3.5 7.5-2.5 3.8-9.5 9-9.5 9Z" stroke="var(--cyan)" stroke-width="1.6"/></svg>
 
-    <h2 class="text-2xl md:text-3xl font-black mb-4">متاح إعطاء الدروس في جميع أنحاء دولة الكويت</h2>
+    <h2 class="text-2xl md:text-3xl font-black mb-3">متاح إعطاء الدروس في جميع أنحاء دولة الكويت</h2>
+    <p class="text-cyan-300/90 text-sm md:text-base mb-4 font-semibold">
+      (حولي، السالمية، العاصمة، الأحمدي، الفروانية، الجهراء، ومبارك الكبير)
+    </p>
     <p class="text-indigo-200/75 mb-10 text-[15px] md:text-base">دروس خصوصية منزلية أو أونلاين — احجز وقتك المناسب بسهولة عبر الواتساب.</p>
 
     <a href="https://wa.me/96551308749" target="_blank" rel="noopener"
-       class="btn-primary inline-flex items-center gap-3 text-white font-bold px-9 py-4 rounded-2xl text-lg mb-8 transition">
+       class="btn-primary inline-flex items-center gap-3 text-white font-bold px-9 py-4 rounded-2xl text-lg mb-8 transition pulse-animation">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.49.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.62-.6-2.86-1.24-4.72-4.1-4.86-4.29-.14-.19-1.16-1.55-1.16-2.96 0-1.4.73-2.09.99-2.37.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.28-.12.56.16.28.71 1.17 1.53 1.89 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.12.07.66-.17 1.34Z"/></svg>
       تواصل عبر الواتساب الآن
     </a>
@@ -277,7 +342,7 @@
 
 <!-- FLOATING WHATSAPP BUTTON -->
 <a href="https://wa.me/96551308749" target="_blank" rel="noopener"
-   class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-2xl btn-primary"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-2xl btn-primary pulse-animation"
    aria-label="تواصل عبر الواتساب">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.49.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.62-.6-2.86-1.24-4.72-4.1-4.86-4.29-.14-.19-1.16-1.55-1.16-2.96 0-1.4.73-2.09.99-2.37.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.28-.12.56.16.28.71 1.17 1.53 1.89 1.05.93 1.94 1.22 2.22 1.36.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.86.27.14.44.2.51.31.07.12.07.66-.17 1.34Z"/></svg>
 </a>
